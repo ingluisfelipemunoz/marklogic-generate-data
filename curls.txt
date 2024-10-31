@@ -1,0 +1,14 @@
+curl -X POST http://localhost:3000/documents \
+  -H "Content-Type: application/json" \
+  -d '{"uri": "/example/doc1.json", "content": {"title": "Sample Document", "description": "This is a sample document."}}'
+
+
+curl -X GET http://localhost:3000/documents/%2Fexample%2Fdoc1.json
+
+
+curl -X PUT http://localhost:3000/documents/%2Fexample%2Fdoc1.json \
+  -H "Content-Type: application/json" \
+  -d '{"content": {"title": "Updated Document", "description": "This document has been updated."}}'
+
+
+curl -X DELETE http://localhost:3000/documents/%2Fexample%2Fdoc1.json
